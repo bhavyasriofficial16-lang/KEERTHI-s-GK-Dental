@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Best dental clinic in Vizag offering root canal, whitening, braces and affordable treatments. Book appointments online easily.">
+<title>KEERTHI's GK Dental Clinic | Vizag</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #b90e02;
+    --teal-light: #1D9E75;
+    --teal-pale: #E1F5EE;
+    --teal-mid: #5DCAA5;
+    --gold: #BA7517;
+    --gold-light: #EF9F27;
+    --gold-pale: #FAEEDA;
+    --text-dark: #1a1a1a;
+    --text-mid: #444;
+    --text-muted: #777;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --border: #e0ede8;
+    --radius: 14px;
+    --shadow: 0 4px 24px rgba(15,110,86,0.10);
+  }
+ 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+  html { scroll-behavior: smooth; }
+ 
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+ 
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--teal);
+    letter-spacing: -0.3px;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none; color: var(--text-mid);
+    font-size: 0.9rem; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-cta {
+    background: var(--teal); color: white;
+    padding: 10px 22px; border-radius: 50px;
+    font-size: 0.85rem; font-weight: 600;
+    text-decoration: none; letter-spacing: 0.3px;
+    transition: background 0.2s, transform 0.15s;
+    border: none; cursor: pointer;
+  }
+  .nav-cta:hover { background: var(--teal-light); transform: translateY(-1px); }
+ 
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 100px 5vw 60px;
+    gap: 4rem;
+    background: linear-gradient(135deg, #f0faf5 0%, #fafaf8 60%, #fffdf5 100%);
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(93,202,165,0.12) 0%, transparent 70%);
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--teal-pale); color: var(--teal);
+    padding: 6px 16px; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-badge::before { content: '★'; color: var(--gold); font-size: 0.75rem; }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin-bottom: 1.2rem;
+  }
+  .hero h1 em { font-style: normal; color: var(--teal); }
+  .hero p {
+    font-size: 1.05rem; color: var(--text-mid);
+    line-height: 1.7; margin-bottom: 2rem; max-width: 480px;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--teal); color: white;
+    padding: 14px 30px; border-radius: 50px;
+    font-size: 0.95rem; font-weight: 600;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: all 0.2s; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--teal-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(15,110,86,0.25); }
+  .btn-outline {
+    border: 2px solid var(--teal); color: var(--teal);
+    padding: 13px 28px; border-radius: 50px;
+    font-size: 0.95rem; font-weight: 600;
+    text-decoration: none; background: transparent; cursor: pointer;
+    transition: all 0.2s; display: inline-block;
+  }
+  .btn-outline:hover { background: var(--teal); color: white; }
+ 
+  .hero-stats {
+    display: flex; gap: 2rem; margin-top: 2.5rem;
+    padding-top: 2rem; border-top: 1px solid var(--border);
+  }
+  .stat-item h3 { font-size: 1.8rem; font-weight: 700; color: var(--teal); }
+  .stat-item p { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+ 
+  .hero-visual {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    position: relative;
+  }
+  .clinic-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    animation: float 6s ease-in-out infinite;
+  }
+  .clinic-card:nth-child(2) { animation-delay: 1.5s; margin-top: 2rem; }
+  .clinic-card:nth-child(3) { animation-delay: 3s; }
+  .clinic-card:nth-child(4) { animation-delay: 4.5s; margin-top: 2rem; }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  .clinic-card .icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--teal-pale);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; margin-bottom: 0.8rem;
+  }
+  .clinic-card h4 { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+  .clinic-card p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+ 
+  /* RATING STRIP */
+  .rating-strip {
+    background: var(--teal);
+    padding: 1.2rem 5vw;
+    display: flex; align-items: center; justify-content: center; gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .rating-item {
+    display: flex; align-items: center; gap: 10px; color: white;
+  }
+  .rating-item .stars { color: #FAC775; letter-spacing: 2px; font-size: 0.9rem; }
+  .rating-item span { font-size: 0.9rem; opacity: 0.9; }
+  .rating-item strong { font-size: 1rem; }
+ 
+  /* SECTION */
+  section { padding: 80px 5vw; }
+  .section-tag {
+    display: inline-block;
+    background: var(--teal-pale); color: var(--teal);
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 50px; margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.2; color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+  .section-sub { font-size: 1rem; color: var(--text-muted); max-width: 520px; line-height: 1.7; }
+ 
+  /* SERVICES */
+  .services-bg { background: white; }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .service-card {
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.8rem 1.4rem;
+    transition: all 0.3s; cursor: default; position: relative; overflow: hidden;
+  }
+  .service-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px; background: var(--teal); transform: scaleX(0);
+    transition: transform 0.3s; transform-origin: left;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--teal-mid); }
+  .service-card:hover::after { transform: scaleX(1); }
+  .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .service-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark); }
+  .service-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+ 
+  /* REVIEWS */
+  .reviews-bg { background: var(--teal-pale); }
+  .reviews-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .review-card {
+    background: white; border-radius: var(--radius);
+    padding: 1.8rem; box-shadow: var(--shadow); border: 1px solid rgba(93,202,165,0.2);
+  }
+  .review-stars { color: var(--gold-light); font-size: 0.9rem; margin-bottom: 0.8rem; letter-spacing: 2px; }
+  .review-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; font-style: italic; margin-bottom: 1.2rem; }
+  .review-author { display: flex; align-items: center; gap: 10px; }
+  .review-avatar {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--teal); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 600;
+  }
+  .review-author-info h4 { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); }
+  .review-author-info p { font-size: 0.75rem; color: var(--text-muted); }
+ 
+  /* APPOINTMENT SECTION */
+  .appt-section { background: white; }
+  .appt-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+  .appt-info h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-dark); }
+  .appt-info p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+  .contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+  .contact-list li {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.9rem; color: var(--text-mid);
+  }
+  .contact-list li .icon-box {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: var(--teal-pale); color: var(--teal);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; flex-shrink: 0;
+  }
+ 
+  /* APPOINTMENT FORM */
+  .appt-form {
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 20px; padding: 2.5rem;
+  }
+  .form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; color: var(--text-dark);
+    margin-bottom: 1.5rem; padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .form-steps {
+    display: flex; gap: 0; margin-bottom: 2rem;
+    background: var(--border); border-radius: 50px;
+    padding: 4px; position: relative;
+  }
+  .form-step {
+    flex: 1; padding: 8px 12px; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 600; text-align: center;
+    cursor: pointer; color: var(--text-muted); transition: all 0.3s;
+    position: relative; z-index: 1;
+  }
+  .form-step.active { background: var(--teal); color: white; box-shadow: 0 2px 8px rgba(15,110,86,0.3); }
+  .form-step.done { color: var(--teal); }
+ 
+  .step-panel { display: none; }
+  .step-panel.active { display: block; }
+ 
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+  .form-row.single { grid-template-columns: 1fr; }
+  .form-group { display: flex; flex-direction: column; gap: 5px; }
+  .form-label { font-size: 0.8rem; font-weight: 600; color: var(--text-mid); letter-spacing: 0.3px; }
+  .form-control {
+    padding: 11px 14px; border: 1.5px solid var(--border); border-radius: 10px;
+    font-size: 0.9rem; font-family: 'DM Sans', sans-serif;
+    background: white; color: var(--text-dark);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .form-control:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(29,158,117,0.12); }
+  .form-control::placeholder { color: #bbb; }
+ 
+  .service-chips {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px;
+  }
+  .chip {
+    padding: 7px 14px; border-radius: 50px;
+    border: 1.5px solid var(--border); background: white;
+    font-size: 0.8rem; color: var(--text-mid);
+    cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+  }
+  .chip.selected { background: var(--teal); border-color: var(--teal); color: white; }
+  .chip:hover:not(.selected) { border-color: var(--teal); color: var(--teal); }
+ 
+  /* Time slots */
+  .slots-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 8px; }
+  .slot {
+    padding: 9px 8px; border-radius: 10px;
+    border: 1.5px solid var(--border); background: white;
+    font-size: 0.78rem; font-weight: 600; text-align: center;
+    cursor: pointer; transition: all 0.2s; color: var(--text-mid);
+  }
+  .slot:hover:not(.taken) { border-color: var(--teal); color: var(--teal); }
+  .slot.selected { background: var(--teal); border-color: var(--teal); color: white; }
+  .slot.taken { opacity: 0.4; cursor: not-allowed; background: #f5f5f5; text-decoration: line-through; }
+ 
+  /* Calendar */
+  .mini-cal { background: white; border-radius: 14px; border: 1.5px solid var(--border); overflow: hidden; }
+  .cal-header {
+    background: var(--teal); color: white;
+    padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .cal-header h4 { font-size: 0.95rem; font-weight: 600; }
+  .cal-nav { background: none; border: none; color: white; cursor: pointer; font-size: 1.2rem; padding: 0 4px; font-family: 'DM Sans', sans-serif; }
+  .cal-body { padding: 12px; }
+  .cal-days-header { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; margin-bottom: 6px; }
+  .cal-days-header span { font-size: 0.7rem; font-weight: 700; color: var(--text-muted); padding: 4px 0; }
+  .cal-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+  .cal-day {
+    aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+    border-radius: 8px; font-size: 0.8rem; cursor: pointer; color: var(--text-mid);
+    transition: all 0.15s;
+  }
+  .cal-day:hover:not(.disabled):not(.other-month) { background: var(--teal-pale); color: var(--teal); }
+  .cal-day.selected { background: var(--teal); color: white; font-weight: 600; }
+  .cal-day.today { font-weight: 700; color: var(--teal); }
+  .cal-day.disabled { opacity: 0.3; cursor: not-allowed; }
+  .cal-day.other-month { opacity: 0.3; }
+ 
+  /* Summary card */
+  .summary-card {
+    background: var(--teal-pale); border-radius: 14px;
+    padding: 1.5rem; border: 1px solid rgba(29,158,117,0.2);
+  }
+  .summary-card h4 { font-size: 1rem; font-weight: 600; color: var(--teal); margin-bottom: 1rem; }
+  .summary-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px dashed rgba(29,158,117,0.2); }
+  .summary-item:last-child { border: none; }
+  .summary-item .label { font-size: 0.82rem; color: var(--text-muted); }
+  .summary-item .value { font-size: 0.85rem; font-weight: 600; color: var(--text-dark); }
+ 
+  .form-actions { display: flex; gap: 1rem; margin-top: 1.5rem; }
+  .btn-next {
+    flex: 1; background: var(--teal); color: white;
+    border: none; padding: 13px; border-radius: 12px;
+    font-size: 0.95rem; font-weight: 600; cursor: pointer;
+    transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+  }
+  .btn-next:hover { background: var(--teal-light); transform: translateY(-1px); }
+  .btn-back {
+    background: none; border: 2px solid var(--border);
+    color: var(--text-muted); padding: 11px 20px;
+    border-radius: 12px; font-size: 0.9rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+  }
+  .btn-back:hover { border-color: var(--text-muted); color: var(--text-dark); }
+ 
+  /* SUCCESS */
+  .success-view {
+    text-align: center; padding: 2rem 1rem; display: none;
+  }
+  .success-icon {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: var(--teal-pale); margin: 0 auto 1.5rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem;
+  }
+  .success-view h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--teal); margin-bottom: 0.5rem; }
+  .success-view p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+ 
+  /* FOOTER */
+  footer {
+    background: var(--text-dark); color: white;
+    padding: 50px 5vw 30px;
+  }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; margin-bottom: 0.8rem; }
+  .footer-logo span { color: var(--gold-light); }
+  .footer-desc { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.8; }
+  footer h4 { font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+  footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  footer ul li a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+  footer ul li a:hover { color: var(--teal-mid); }
+  .footer-bottom {
+    padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.8rem; color: rgba(255,255,255,0.4);
+  }
+ 
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding-top: 90px; }
+    .hero-visual { display: none; }
+    .appt-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .slots-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+ 
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">KEERTHI's <span>GK</span> Dental</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#appointment">Appointment</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#appointment" class="nav-cta">Book Now</a>
+</nav>
+ 
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">5.0 Rating · 627+ Reviews · Vizag</div>
+    <h1>Your Smile Deserves the <em>Best Care</em> in Vizag</h1>
+    <p>Trusted by 1000+ patients in Visakhapatnam. Expert dental treatments with a gentle touch, modern technology, and affordable pricing.</p>
+    <div class="hero-btns">
+      <a href="#appointment" class="btn-primary">Book Appointment →</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><h3>627+</h3><p>5-Star Reviews</p></div>
+      <div class="stat-item"><h3>10+</h3><p>Years Experience</p></div>
+      <div class="stat-item"><h3>1K+</h3><p>Happy Patients</p></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="clinic-card">
+      <div class="icon">🦷</div>
+      <h4>Root Canal</h4>
+      <p>Pain-free, expert endodontic care</p>
+    </div>
+    <div class="clinic-card">
+      <div class="icon">✨</div>
+      <h4>Teeth Whitening</h4>
+      <p>Brighten your smile in one visit</p>
+    </div>
+    <div class="clinic-card">
+      <div class="icon">😁</div>
+      <h4>Orthodontics</h4>
+      <p>Braces &amp; clear aligners</p>
+    </div>
+    <div class="clinic-card">
+      <div class="icon">🛡️</div>
+      <h4>Preventive Care</h4>
+      <p>Cleaning, scaling &amp; checkups</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- RATING STRIP -->
+<div class="rating-strip">
+  <div class="rating-item">
+    <div class="stars">★★★★★</div>
+    <strong>5.0</strong>
+    <span>on Google Maps</span>
+  </div>
+  <div class="rating-item">
+    <span>📍 Malkapuram, Visakhapatnam</span>
+  </div>
+  <div class="rating-item">
+    <span>⏰ Mon–Sat: 9AM–1PM, 5PM–9PM</span>
+  </div>
+  <div class="rating-item">
+    <span>📞 079937 11306</span>
+  </div>
+</div>
+ 
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="section-tag">What We Offer</div>
+  <h2 class="section-title">Comprehensive Dental Services</h2>
+  <p class="section-sub">From routine cleanings to advanced cosmetic procedures — all under one roof with the latest technology.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🦷</div>
+      <h3>Root Canal Treatment</h3>
+      <p>Advanced endodontic therapy to save your natural tooth with minimal discomfort.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">👑</div>
+      <h3>Dental Crowns &amp; Caps</h3>
+      <p>Custom-fitted crowns that restore the shape, size, and strength of damaged teeth.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✨</div>
+      <h3>Teeth Whitening</h3>
+      <p>Professional-grade whitening treatments for a brighter, more confident smile.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">😬</div>
+      <h3>Orthodontics</h3>
+      <p>Metal braces, ceramic braces and clear aligner options for all ages.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Tooth Extraction</h3>
+      <p>Safe, painless extractions with sedation options for anxious patients.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🛡️</div>
+      <h3>Scaling &amp; Cleaning</h3>
+      <p>Professional plaque &amp; tartar removal to maintain optimal gum health.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💎</div>
+      <h3>Dental Implants</h3>
+      <p>Permanent tooth replacement that looks, feels and functions like natural teeth.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🧒</div>
+      <h3>Pediatric Dentistry</h3>
+      <p>Gentle, child-friendly dental care in a warm and welcoming environment.</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- REVIEWS -->
+<section class="reviews-bg" id="reviews">
+  <div class="section-tag">Patient Stories</div>
+  <h2 class="section-title">What Our Patients Say</h2>
+  <p class="section-sub">Real experiences from real patients in Visakhapatnam who trust us with their smiles.</p>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"The treatment is very good and reasonable. I was suffering with pain since many days but the doctor made me feel really comfortable and reduced my pain very quickly. I felt very happy and satisfied."</p>
+      <div class="review-author">
+        <div class="review-avatar">RB</div>
+        <div class="review-author-info">
+          <h4>Renuka Barri</h4>
+          <p>2 months ago · Verified Patient</p>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Great experience, the doctor is very experienced and explains in a very good understanding manner. I came with pain and the root canal treatment is completed and caps are placed very effectively."</p>
+      <div class="review-author">
+        <div class="review-avatar">SG</div>
+        <div class="review-author-info">
+          <h4>Seeram Girijalakshmi</h4>
+          <p>1 month ago · Verified Patient</p>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Very good experience going to the clinic — well maintained hygiene. I felt totally comfortable during my treatment. Very knowledgeable professionals."</p>
+      <div class="review-author">
+        <div class="review-avatar">SV</div>
+        <div class="review-author-info">
+          <h4>Siva Sai Vankala</h4>
+          <p>2 months ago · Verified Patient</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- APPOINTMENT -->
+<section class="appt-section" id="appointment">
+  <div class="section-tag">Book Now</div>
+  <h2 class="section-title">Schedule Your Visit</h2>
+  <p class="section-sub">Easy online booking in 3 simple steps. We'll confirm your appointment within minutes.</p>
+ 
+  <div class="appt-grid">
+    <div class="appt-info">
+      <h3>Clinic Information</h3>
+      <p>Visit us at our conveniently located clinic in Malkapuram, Visakhapatnam. We welcome walk-ins, but appointments are recommended.</p>
+      <ul class="contact-list">
+        <li>
+          <div class="icon-box">📍</div>
+          <span>65-4-120A, Kotta Nakkavanipalem, PO, Malkapuram, Visakhapatnam – 530011</span>
+        </li>
+        <li>
+          <div class="icon-box">📞</div>
+          <span><strong>079937 11306</strong></span>
+        </li>
+        <li>
+          <div class="icon-box">⏰</div>
+          <span>Mon – Sat: 9:00 AM – 1:00 PM &amp; 5:00 PM – 9:00 PM</span>
+        </li>
+        <li>
+          <div class="icon-box">🌙</div>
+          <span>Sunday: By Appointment Only</span>
+        </li>
+        <li>
+          <div class="icon-box">🗺️</div>
+          <a href="https://maps.app.goo.gl/GdMNtacocZpiY3p79" target="_blank" style="color:var(--teal); font-weight:600;">Get Directions on Google Maps →</a>
+        </li>
+      </ul>
+    </div>
+ 
+    <div class="appt-form">
+      <div class="form-title">Book Your Appointment</div>
+ 
+      <!-- Steps Indicator -->
+      <div class="form-steps">
+        <div class="form-step active" id="step-ind-1">1. Details</div>
+        <div class="form-step" id="step-ind-2">2. Schedule</div>
+        <div class="form-step" id="step-ind-3">3. Confirm</div>
+      </div>
+ 
+      <!-- Main Form Area -->
+      <div id="form-area">
+ 
+        <!-- STEP 1 -->
+        <div class="step-panel active" id="step-1">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name *</label>
+              <input type="text" class="form-control" id="fname" placeholder="Your first name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name *</label>
+              <input type="text" class="form-control" id="lname" placeholder="Your last name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" class="form-control" id="phone" placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Age</label>
+              <input type="number" class="form-control" id="age" placeholder="Your age" min="1" max="120">
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label class="form-label">Select Service *</label>
+              <div class="service-chips" id="service-chips">
+                <div class="chip" onclick="selectChip(this)">Root Canal</div>
+                <div class="chip" onclick="selectChip(this)">Teeth Whitening</div>
+                <div class="chip" onclick="selectChip(this)">Dental Crown</div>
+                <div class="chip" onclick="selectChip(this)">Cleaning</div>
+                <div class="chip" onclick="selectChip(this)">Orthodontics</div>
+                <div class="chip" onclick="selectChip(this)">Extraction</div>
+                <div class="chip" onclick="selectChip(this)">Implants</div>
+                <div class="chip" onclick="selectChip(this)">Consultation</div>
+                <div class="chip" onclick="selectChip(this)">Pediatric</div>
+                <div class="chip" onclick="selectChip(this)">Other</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label class="form-label">Describe your concern (optional)</label>
+              <textarea class="form-control" id="concern" placeholder="Briefly describe your dental concern or symptoms..." rows="3" style="resize:none;"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn-next" onclick="goStep(2)">Next: Choose Date &amp; Time →</button>
+          </div>
+        </div>
+ 
+        <!-- STEP 2 -->
+        <div class="step-panel" id="step-2">
+          <div style="margin-bottom:1.2rem;">
+            <label class="form-label" style="display:block;margin-bottom:8px;">Select Date *</label>
+            <div class="mini-cal" id="mini-cal">
+              <div class="cal-header">
+                <button class="cal-nav" onclick="changeMonth(-1)">&#8249;</button>
+                <h4 id="cal-month-label"></h4>
+                <button class="cal-nav" onclick="changeMonth(1)">&#8250;</button>
+              </div>
+              <div class="cal-body">
+                <div class="cal-days-header">
+                  <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                </div>
+                <div class="cal-days" id="cal-days"></div>
+              </div>
+            </div>
+          </div>
+ 
+          <div>
+            <label class="form-label" style="display:block;margin-bottom:8px;">Available Time Slots *</label>
+            <p id="no-date-msg" style="font-size:0.82rem;color:var(--text-muted);font-style:italic;">Please select a date first.</p>
+            <div class="slots-grid" id="slots-grid" style="display:none;"></div>
+          </div>
+ 
+          <div class="form-actions" style="margin-top:1.5rem;">
+            <button class="btn-back" onclick="goStep(1)">← Back</button>
+            <button class="btn-next" onclick="goStep(3)" style="flex:1;">Next: Review &amp; Confirm →</button>
+          </div>
+        </div>
+ 
+        <!-- STEP 3 -->
+        <div class="step-panel" id="step-3">
+          <div class="summary-card" id="summary-display">
+            <h4>Appointment Summary</h4>
+            <div class="summary-item">
+              <span class="label">Patient</span>
+              <span class="value" id="sum-name">—</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">Phone</span>
+              <span class="value" id="sum-phone">—</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">Service</span>
+              <span class="value" id="sum-service">—</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">Date</span>
+              <span class="value" id="sum-date">—</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">Time</span>
+              <span class="value" id="sum-time">—</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">Clinic</span>
+              <span class="value">KEETHI's GK Dental, Vizag</span>
+            </div>
+          </div>
+ 
+          <div style="background: var(--gold-pale); border-radius:12px; padding:1rem 1.2rem; margin-top:1.2rem; border:1px solid rgba(186,117,23,0.2);">
+            <p style="font-size:0.82rem; color: var(--gold); line-height:1.6;">
+              <strong>📌 Note:</strong> Please arrive 10 minutes before your appointment. Bring any previous dental records or X-rays if available. Call us at <strong>079937 11306</strong> if you need to reschedule.
+            </p>
+          </div>
+ 
+          <div style="margin-top:1.2rem;">
+            <div class="form-group">
+              <label class="form-label">Preferred Contact Method</label>
+              <select class="form-control" id="contact-pref">
+                <option value="phone">Phone Call</option>
+                <option value="whatsapp">WhatsApp Message</option>
+                <option value="either">Either is Fine</option>
+              </select>
+            </div>
+          </div>
+ 
+          <div class="form-actions" style="margin-top:1.5rem;">
+            <button class="btn-back" onclick="goStep(2)">← Back</button>
+            <button class="btn-next" style="flex:1;" onclick="submitAppointment()">✓ Confirm Appointment</button>
+          </div>
+        </div>
+ 
+      </div><!-- end form-area -->
+ 
+      <!-- SUCCESS VIEW -->
+      <div class="success-view" id="success-view">
+        <div class="success-icon">✅</div>
+        <h3>Appointment Booked!</h3>
+        <p>Thank you, <strong id="success-name"></strong>! Your appointment has been requested for <strong id="success-datetime"></strong>.</p>
+        <br>
+        <p style="color:var(--teal);">We will confirm via call/WhatsApp at <strong id="success-phone"></strong> within 1 hour.</p>
+        <br>
+        <button class="btn-next" onclick="resetForm()" style="max-width:220px;margin:0 auto;display:block;">Book Another →</button>
+      </div>
+ 
+    </div><!-- end appt-form -->
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">KEERTHI's <span>GK</span> Dental Clinic</div>
+      <p class="footer-desc">Providing compassionate, high-quality dental care to the families of Visakhapatnam. Your smile is our passion.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#reviews">Patient Reviews</a></li>
+        <li><a href="#appointment">Book Appointment</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:07993711306">📞 079937 11306</a></li>
+        <li><a href="https://maps.app.goo.gl/GdMNtacocZpiY3p79" target="_blank">📍 Malkapuram, Vizag</a></li>
+        <li><a href="#">⏰ Mon–Sat: 9AM–1PM &amp; 5–9PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 KEERTHI's GK Dental Clinic, Visakhapatnam. All rights reserved.</span>
+    <span>Designed with ❤️ for healthy smiles BY BHAVYASRI.</span>
+  </div>
+</footer>
+ 
+<script>
+  // ---- CALENDAR ----
+  let currentDate = new Date();
+  let selectedDate = null;
+  let selectedSlot = null;
+  let selectedService = null;
+  let calYear = currentDate.getFullYear();
+  let calMonth = currentDate.getMonth();
+ 
+  const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const TAKEN_SLOTS = ['9:00 AM','11:00 AM','5:30 PM','7:00 PM'];
+ 
+  function renderCalendar() {
+    document.getElementById('cal-month-label').textContent = MONTHS[calMonth] + ' ' + calYear;
+    const daysEl = document.getElementById('cal-days');
+    daysEl.innerHTML = '';
+    const firstDay = new Date(calYear, calMonth, 1).getDay();
+    const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+    const prevDays = new Date(calYear, calMonth, 0).getDate();
+    const today = new Date(); today.setHours(0,0,0,0);
+ 
+    for (let i = 0; i < firstDay; i++) {
+      const d = document.createElement('div');
+      d.className = 'cal-day other-month disabled';
+      d.textContent = prevDays - firstDay + i + 1;
+      daysEl.appendChild(d);
+    }
+    for (let d = 1; d <= daysInMonth; d++) {
+      const el = document.createElement('div');
+      el.className = 'cal-day';
+      el.textContent = d;
+      const thisDate = new Date(calYear, calMonth, d);
+      if (thisDate < today) { el.classList.add('disabled'); }
+      else if (thisDate.toDateString() === today.toDateString()) { el.classList.add('today'); }
+      if (selectedDate && thisDate.toDateString() === selectedDate.toDateString()) { el.classList.add('selected'); }
+      el.onclick = () => selectDay(d, el);
+      daysEl.appendChild(el);
+    }
+    const remaining = 42 - firstDay - daysInMonth;
+    for (let i = 1; i <= remaining && remaining < 42; i++) {
+      const el = document.createElement('div');
+      el.className = 'cal-day other-month disabled';
+      el.textContent = i;
+      daysEl.appendChild(el);
+    }
+  }
+ 
+  function selectDay(d, el) {
+    const thisDate = new Date(calYear, calMonth, d);
+    const today = new Date(); today.setHours(0,0,0,0);
+    if (thisDate < today) return;
+    selectedDate = thisDate;
+    selectedSlot = null;
+    document.querySelectorAll('.cal-day').forEach(x => x.classList.remove('selected'));
+    el.classList.add('selected');
+    renderSlots();
+  }
+ 
+  function changeMonth(dir) {
+    calMonth += dir;
+    if (calMonth > 11) { calMonth = 0; calYear++; }
+    if (calMonth < 0) { calMonth = 11; calYear--; }
+    renderCalendar();
+  }
+ 
+  const ALL_SLOTS = ['9:00 AM','9:30 AM','10:00 AM','10:30 AM','11:00 AM','11:30 AM','12:00 PM','5:00 PM','5:30 PM','6:00 PM','6:30 PM','7:00 PM','7:30 PM','8:00 PM'];
+ 
+  function renderSlots() {
+    const grid = document.getElementById('slots-grid');
+    const msg = document.getElementById('no-date-msg');
+    grid.style.display = 'grid'; msg.style.display = 'none';
+    grid.innerHTML = '';
+    ALL_SLOTS.forEach(t => {
+      const el = document.createElement('div');
+      el.className = 'slot';
+      el.textContent = t;
+      if (TAKEN_SLOTS.includes(t)) { el.classList.add('taken'); }
+      else {
+        if (selectedSlot === t) el.classList.add('selected');
+        el.onclick = () => selectSlot(t);
+      }
+      grid.appendChild(el);
+    });
+  }
+ 
+  function selectSlot(t) {
+    selectedSlot = t;
+    document.querySelectorAll('.slot').forEach(s => s.classList.remove('selected'));
+    document.querySelectorAll('.slot').forEach(s => { if (s.textContent === t) s.classList.add('selected'); });
+  }
+ 
+  function selectChip(el) {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedService = el.textContent;
+  }
+ 
+  // ---- MULTI-STEP ----
+  let currentStep = 1;
+ 
+  function goStep(n) {
+    if (n === 2) {
+      const fn = document.getElementById('fname').value.trim();
+      const ln = document.getElementById('lname').value.trim();
+      const ph = document.getElementById('phone').value.trim();
+      if (!fn || !ln || !ph) { alert('Please fill in your name and phone number.'); return; }
+      if (!selectedService) { alert('Please select a service.'); return; }
+    }
+    if (n === 3) {
+      if (!selectedDate) { alert('Please select a date.'); return; }
+      if (!selectedSlot) { alert('Please select a time slot.'); return; }
+      populateSummary();
+    }
+    currentStep = n;
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('step-' + n).classList.add('active');
+    document.querySelectorAll('.form-step').forEach((s,i) => {
+      s.classList.remove('active','done');
+      if (i + 1 < n) s.classList.add('done');
+      if (i + 1 === n) s.classList.add('active');
+    });
+  }
+ 
+  function populateSummary() {
+    const fn = document.getElementById('fname').value.trim();
+    const ln = document.getElementById('lname').value.trim();
+    document.getElementById('sum-name').textContent = fn + ' ' + ln;
+    document.getElementById('sum-phone').textContent = document.getElementById('phone').value.trim();
+    document.getElementById('sum-service').textContent = selectedService || '—';
+    const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('sum-date').textContent = selectedDate ? selectedDate.toLocaleDateString('en-IN', opts) : '—';
+    document.getElementById('sum-time').textContent = selectedSlot || '—';
+  }
+ 
+  function submitAppointment() {
+  const fn = document.getElementById('fname').value.trim();
+  const ln = document.getElementById('lname').value.trim();
+  const ph = document.getElementById('phone').value.trim();
+  const age = document.getElementById('age').value.trim();
+  const concern = document.getElementById('concern').value.trim();
+  const contactPref = document.getElementById('contact-pref').value;
+
+  const dateStr = selectedDate
+    ? selectedDate.toLocaleDateString('en-IN', { weekday:'short', month:'short', day:'numeric' })
+    : '';
+
+  const timeStr = selectedSlot;
+  const fullName = fn + " " + ln;
+
+  // ✅ WhatsApp
+  const whatsappMsg = `Hello Doctor,
+New Appointment Booking:
+
+Name: ${fullName}
+Phone: ${ph}
+Age: ${age}
+Service: ${selectedService}
+Date: ${dateStr}
+Time: ${timeStr}
+Concern: ${concern}
+Contact: ${contactPref}`;
+
+  const whatsappURL = `https://wa.me/917993711306?text=${encodeURIComponent(whatsappMsg)}`;
+  window.open(whatsappURL, "_blank");
+
+  // ✅ EmailJS
+  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    name: fullName,
+    phone: ph,
+    service: selectedService,
+    date: dateStr,
+    time: timeStr,
+    message: concern
+  });
+
+  // ✅ Google Sheets
+  fetch("YOUR_GOOGLE_SCRIPT_URL", {
+    method: "POST",
+    body: JSON.stringify({
+      name: fullName,
+      phone: ph,
+      age: age,
+      service: selectedService,
+      date: dateStr,
+      time: timeStr,
+      concern: concern
+    })
+  });
+
+  // ✅ Success UI
+  document.getElementById('success-name').textContent = fn;
+  document.getElementById('success-phone').textContent = ph;
+  document.getElementById('success-datetime').textContent = dateStr + ' at ' + timeStr;
+
+  document.getElementById('form-area').style.display = 'none';
+  document.getElementById('success-view').style.display = 'block';
+  document.querySelector('.form-steps').style.display = 'none';
+  document.querySelector('.form-title').textContent = 'Booking Confirmed!';
+}
+ 
+  function resetForm() {
+    document.getElementById('form-area').style.display = 'block';
+    document.getElementById('success-view').style.display = 'none';
+    document.querySelector('.form-steps').style.display = 'flex';
+    document.querySelector('.form-title').textContent = 'Book Your Appointment';
+    document.getElementById('fname').value = '';
+    document.getElementById('lname').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('age').value = '';
+    document.getElementById('concern').value = '';
+    selectedDate = null; selectedSlot = null; selectedService = null;
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+    goStep(1);
+    renderCalendar();
+    document.getElementById('slots-grid').style.display = 'none';
+    document.getElementById('no-date-msg').style.display = 'block';
+  }
+ 
+  // INIT
+  renderCalendar();
+</script>
+</body>
+</html>
